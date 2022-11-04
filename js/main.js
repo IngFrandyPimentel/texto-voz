@@ -6,6 +6,7 @@ var btnPegar = document.querySelector(".btnPegar");
 function escuchar(){
     var msg = texto.value;
     var utterance = new SpeechSynthesisUtterance(msg);
+    
     speechSynthesis.speak(utterance);
 
 }
