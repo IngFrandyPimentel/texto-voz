@@ -43,3 +43,11 @@ footer{
     font-weight: 200;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 680px) {
+    textarea {
+      
+      height: 390px;
+    }
+
+  }

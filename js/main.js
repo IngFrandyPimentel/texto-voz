@@ -1,7 +1,8 @@
 var texto=document.querySelector("textarea");
-var boton = document.querySelector("#btnLeer");
-var btnCopiar = document.querySelector(".btnCopiar");
-var btnPegar = document.querySelector(".btnPegar");
+var boton = document.querySelector("#btnLeer").addEventListener('click', escuchar);
+var btnCopiar = document.querySelector(".btnCopiar").addEventListener('click',copiar);
+var btnPegar = document.querySelector(".btnPegar").addEventListener('click', pegar);
+var btnBorrar = document.querySelector('[data-btn-borrar]').addEventListener('click', borrar);
 
 function escuchar(){
     var msg = texto.value;
@@ -21,7 +22,7 @@ async function  pegar  (){
     texto.value=textoPegar;
     
 }
-boton.onclick=escuchar;
-btnCopiar.onclick=copiar;
-btnPegar.onclick=pegar;
 
+function borrar(){
+    texto.value="";
+}
